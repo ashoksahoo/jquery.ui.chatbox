@@ -12,31 +12,31 @@
       $(document).ready(function(){
           var box = null;
           $("#ashok").click(function(event, ui) {
-              if(box) {
+              if(false) {
                   box.chatbox("option", "boxManager").toggleBox();
               }
               else {
-                  box = $("#chat_div").chatbox({id:"Ashok", 
+                  box = $("#ashokbox").chatbox({id:"Ashok", 
                                                 user:{key : "value"},
                                                 title : "Ashok Sahoo",
                                                 messageSent : function(id, user, msg) {
                                                     // $("#log").append(id + " said: " + msg + "<br/>");
-                                                    $("#chat_div").chatbox("option", "boxManager").addMsg(id, msg);
+                                                    $("#ashokbox").chatbox("option", "boxManager").addMsg(id, msg);
                                                 }});
                   // document.write(box);
               }
           });
           $("#sahoo").click(function(event, ui) {
-              if(box) {
+              if(false) {
                   box.chatbox("option", "boxManager").toggleBox();
               }
               else {
-                  box = $("#chat_div").chatbox({id:"Sahoo", 
+                  box = $("#sahoobox").chatbox({id:"Sahoo", 
                                                 user:{key : "value"},
                                                 title : "Sahoo Ashok",
                                                 messageSent : function(id, user, msg) {
                                                     // $("#log").append(id + " said: " + msg + "<br/>");
-                                                    $("#chat_div").chatbox("option", "boxManager").addMsg(id, msg);
+                                                    $("#sahoobox").chatbox("option", "boxManager").addMsg(id, msg);
                                                 }});
               }
           });
@@ -44,7 +44,9 @@
     </script>
   </head>
   <body>
-    <div id="chat_div">
+    <div id="ashokbox">
+    </div>
+    <div id="sahoobox">
     </div>
     <li class="ui-widget-content" id="ashok">Ashok Sahoo</li>
     <li class="ui-widget-content" id="sahoo">Sahoo Ashok</li>
